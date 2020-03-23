@@ -15,5 +15,9 @@ namespace supermarket.API.Domain.Models {
 
         public bool inStock {get; set;}
 
+        public int categoryId {get; set;}
+
+        public Category category {get; set;}
+
     }
 }
