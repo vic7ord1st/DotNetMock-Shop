@@ -6,13 +6,13 @@ using supermarket.API.Domain.Repositories;
 
 namespace supermarket.API.Services
 {
- public class CategoryService: ICategoryService  {
+ public class CategoryService: IListService<Category>  {
 
-     private readonly ICategoryRepository _categoryRepository;
-     public CategoryService (ICategoryRepository categoryRepository){
+     private readonly IListRepository <Category> _categoryRepository;
+     public CategoryService (IListRepository <Category> categoryRepository){
          _categoryRepository = categoryRepository;
      }
-     public async Task<IEnumerable<Category>> ListCategoriesAsync() {
+     public async Task<IEnumerable<Category>> ListAsync() {
          return await _categoryRepository.ListAsync();
      }
  }

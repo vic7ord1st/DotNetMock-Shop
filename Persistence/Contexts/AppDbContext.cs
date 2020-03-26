@@ -30,8 +30,8 @@ namespace supermarket.API.Persistence.Contexts {
 
             //Seeding the User table
             builder.Entity<User>().HasData(
-                    new User {id = 1, firstName = "Victor", lastName = "Okoroafor", password = "Admin123", isAdmin = true},
-                    new User {id = 2, firstName = "David", lastName = "Blaine", password = "test1234", isAdmin = false}
+                    new User {id = 1, firstName = "Victor", lastName = "Okoroafor", email = "okoroafor.victor@gmail.com", password = "Admin123", isAdmin = true},
+                    new User {id = 2, firstName = "David", lastName = "Blaine", email = "davidblaine@blaine.com", password = "test1234", isAdmin = false}
                     
             );
 
@@ -41,11 +41,12 @@ namespace supermarket.API.Persistence.Contexts {
             builder.Entity<Category>().Property( c => c.id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Category>().Property( c => c.name).IsRequired();
             builder.Entity<Category>().HasIndex(c => c.name).IsUnique(true);
-            builder.Entity<Category>().HasMany(c => c.products).WithOne(p => p.category).HasForeignKey(p => p.categoryId);
+            builder.Entity<Category>().HasMany(p => p.products).WithOne(c => c.category).HasForeignKey(p => p.categoryId);
             
             // Seeding the Category table
             builder.Entity<Category>().HasData(
-                new Category {id = 1, name = "Food and Drinks"}
+                new Category {id = 1, name = "Food and Drinks"},
+                new Category {id = 2, name = "Home Decor"}
             );
 
             builder.Entity<Cart>().ToTable("Carts");
@@ -68,10 +69,12 @@ namespace supermarket.API.Persistence.Contexts {
             builder.Entity<Product>().Property(p => p.price).IsRequired();
             builder.Entity<Product>().Property(p => p.imageUrl).IsRequired();
             builder.Entity<Product>().Property(p => p.inStock).IsRequired();
+            builder.Entity<Product>().Property(p => p.categoryId).IsRequired();
 
             // Seeding the Product Table
             builder.Entity<Product>().HasData(
-                new Product { id = 1, name = "Coke", description = "A very refreshing beverage", price = 120, imageUrl = "google.com", inStock = true}
+                new Product { id = 1, categoryId = 1, name = "Coke", description = "A very refreshing beverage", price = 120, imageUrl = "google.com", inStock = true},
+                new Product { id = 2, categoryId = 1, name = "Fanta", description = "Sunny side of life", price = 150, imageUrl = "google.com", inStock = true}
             );
 
         }
