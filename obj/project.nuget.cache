@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WNptaxQQn0VquxTXBSyfqHwZZeczKj3mdLB1zbrP+2VuTzDjxWaNy337DerJQucgche/IGa7voQU6t8wHBTSBQ==",
+  "dgSpecHash": "XRf3tCtvHjqRqcsVbg1SgtqMxcWU8dLHzCdhdy8+ulkcPPcP4/2EtPk2oJee/axABlZLyE7VZ/u+osfn4YvoOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\CRUSADR\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\CRUSADR\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\CRUSADR\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\CRUSADR\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

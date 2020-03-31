@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +12,7 @@ using supermarket.API.Domain.Repositories;
 using supermarket.API.Persistence.Repositories;
 using supermarket.API.Persistence.Contexts;
 using supermarket.API.Domain.Models;
+using supermarket.API.Resources;
 
 namespace supermarket.API
 {
@@ -34,12 +30,13 @@ namespace supermarket.API
         {
             services.AddMvc();
             services.AddControllers();
-
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("supermarket-in-memory"));
-            services.AddScoped<IListRepository<Category>, CategoryRepository>();
-            services.AddScoped<IListService<Category>, CategoryService>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IListRepository<Product>, ProductRepository>();
             services.AddScoped<IListService<Product>, ProductService>();
+            services.AddScoped <IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper(typeof(CategoryResource));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

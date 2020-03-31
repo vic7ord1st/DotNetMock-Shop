@@ -50,3 +50,5 @@ C:\Users\CRUSADR\Desktop\supermarket.API\obj\Debug\netcoreapp3.1\staticwebassets
 C:\Users\CRUSADR\Desktop\supermarket.API\obj\Debug\netcoreapp3.1\supermarket.API.dll
 C:\Users\CRUSADR\Desktop\supermarket.API\obj\Debug\netcoreapp3.1\supermarket.API.pdb
 C:\Users\CRUSADR\Desktop\supermarket.API\obj\Debug\netcoreapp3.1\supermarket.API.genruntimeconfig.cache
+C:\Users\CRUSADR\Desktop\supermarket.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\CRUSADR\Desktop\supermarket.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
