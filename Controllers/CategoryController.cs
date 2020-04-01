@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using supermarket.API.Domain.Models;
+using Microsoft.Extensions.Logging;
 using supermarket.API.Domain.Services;
 using supermarket.API.Resources;
 using supermarket.API.Extensions;
@@ -16,10 +17,13 @@ namespace supermarket.API.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
 
-        public CategoryController(ICategoryService categoryService, IMapper mapper)
+        private readonly ILogger _logger;
+
+        public CategoryController(ICategoryService categoryService, IMapper mapper, ILogger<CategoryController> logger)
         {
             _categoryService = categoryService;
             _mapper = mapper;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -38,12 +42,42 @@ namespace supermarket.API.Controllers
 
             var category = _mapper.Map<SaveCategoryResource, Category>(resource);
             var result = await _categoryService.SaveAsync(category);
+            _logger.LogInformation($"This is the result for post {result}");
 
             if (!result._success)
                 return BadRequest(result._message);
 
             var categoryResource = _mapper.Map<Category, CategoryResource>(result.Category);
             return Ok(categoryResource);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync (int id, [FromBody] SaveCategoryResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+            
+            var category = _mapper.Map<SaveCategoryResource, Category> (resource);
+            var result = await _categoryService.UpdateAsync(id, category);
+            _logger.LogInformation($"This is the result for put {result}");
+            if(!result._success)
+                return BadRequest(result._message);
+
+            var categoryResource = _mapper.Map<Category, CategoryResource> (result.Category);
+            return Ok(categoryResource);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync (int id)
+        {
+            var result = await _categoryService.DeleteAsync(id);
+
+            if(!result._success)
+                return BadRequest(result._message);
+            
+            var categoryResource = _mapper.Map<Category, CategoryResource> (result.Category);
+            return Ok(categoryResource);
+
         }
     }
 }

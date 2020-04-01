@@ -18,16 +18,19 @@ namespace supermarket.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private ILogger<Startup> _logger;
+        public IConfiguration Configuration { get; }
+        public Startup(ILogger<Startup> logger, IConfiguration configuration)
         {
+            _logger = logger;
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            _logger.LogInformation("Configure service called");
             services.AddMvc();
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("supermarket-in-memory"));
@@ -35,13 +38,15 @@ namespace supermarket.API
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IListRepository<Product>, ProductRepository>();
             services.AddScoped<IListService<Product>, ProductService>();
-            services.AddScoped <IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(CategoryResource));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            _logger.LogInformation("configure called");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

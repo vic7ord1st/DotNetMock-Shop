@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using supermarket.API.Persistence.Contexts;
 
@@ -22,7 +23,12 @@ namespace supermarket.API
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args).ConfigureLogging( logBuilder => {
+                logBuilder.ClearProviders();
+                logBuilder.AddConsole();
+                logBuilder.AddTraceSource("Information, Activitytracing");
+
+            })
             .UseStartup<Startup>()
             .Build();
     }
