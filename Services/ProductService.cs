@@ -6,10 +6,10 @@ using supermarket.API.Domain.Repositories;
 
 namespace supermarket.API.Services
 {
- public class ProductService: IListService<Product>  {
+ public class ProductService: IProductService  {
 
-     private readonly IListRepository<Product> _productRepository;
-     public ProductService (IListRepository<Product> productRepository){
+     private readonly IProductRepository _productRepository;
+     public ProductService (IProductRepository productRepository){
          _productRepository = productRepository;
      }
      public async Task<IEnumerable<Product>> ListAsync() {

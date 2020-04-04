@@ -6,7 +6,7 @@ using supermarket.API.Domain.Repositories;
 using supermarket.API.Persistence.Contexts;
 
 namespace supermarket.API.Persistence.Repositories {
-   public class ProductRepository : BaseRepository, IListRepository<Product> {
+   public class ProductRepository : BaseRepository, IProductRepository {
        public ProductRepository (AppDbContext context): base(context){}
 
        public async Task<IEnumerable<Product>> ListAsync (){

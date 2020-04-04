@@ -9,9 +9,9 @@ namespace supermarket.API.Controllers
     [Route("/api/[controller]")]
     public class ProductController : Controller {
 
-       private readonly IListService<Product>  _productService;
+       private readonly IProductService  _productService;
 
-       public ProductController (IListService<Product> productService){
+       public ProductController (IProductService productService){
            _productService = productService;
        }
 

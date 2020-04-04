@@ -36,8 +36,8 @@ namespace supermarket.API
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("supermarket-in-memory"));
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IListRepository<Product>, ProductRepository>();
-            services.AddScoped<IListService<Product>, ProductService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(CategoryResource));
         }
