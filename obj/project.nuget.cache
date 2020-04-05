@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XRf3tCtvHjqRqcsVbg1SgtqMxcWU8dLHzCdhdy8+ulkcPPcP4/2EtPk2oJee/axABlZLyE7VZ/u+osfn4YvoOw==",
+  "dgSpecHash": "btG1ovllmhMzMU5eq7bmlJSBUA3QUSVVK7RWswramloTvAw6z4EcNkWdzc+50nMmQPiEMemsg2+pCPzY797MKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj",
+  "projectFilePath": "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\supermarket.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CRUSADR\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\CRUSADR\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "mockshop.API/1.0.0": {
+      "supermarket.API/1.0.0": {
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
@@ -292,10 +292,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "mockshop.API.dll": {}
+          "supermarket.API.dll": {}
         },
         "compile": {
-          "mockshop.API.dll": {}
+          "supermarket.API.dll": {}
         }
       },
       "AutoMapper/9.0.0": {
@@ -2797,7 +2797,7 @@
     }
   },
   "libraries": {
-    "mockshop.API/1.0.0": {
+    "supermarket.API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
