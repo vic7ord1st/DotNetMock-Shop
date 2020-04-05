@@ -1,6 +1,6 @@
-using supermarket.API.Persistence.Contexts;
+using mockshop.API.Persistence.Contexts;
 
-namespace supermarket.API.Persistence.Repositories{
+namespace mockshop.API.Persistence.Repositories{
 
     public abstract class BaseRepository{
 

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using supermarket.API.Domain.Models;
-using supermarket.API.Domain.Services.Communication;
+using mockshop.API.Domain.Models;
+using mockshop.API.Domain.Services.Communication;
 
-namespace supermarket.API.Domain.Services
+namespace mockshop.API.Domain.Services
 {
     public interface ICategoryService
     {

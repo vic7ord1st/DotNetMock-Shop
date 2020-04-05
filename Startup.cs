@@ -6,15 +6,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using supermarket.API.Services;
-using supermarket.API.Domain.Services;
-using supermarket.API.Domain.Repositories;
-using supermarket.API.Persistence.Repositories;
-using supermarket.API.Persistence.Contexts;
-using supermarket.API.Domain.Models;
-using supermarket.API.Resources;
+using mockshop.API.Services;
+using mockshop.API.Domain.Services;
+using mockshop.API.Domain.Repositories;
+using mockshop.API.Persistence.Repositories;
+using mockshop.API.Persistence.Contexts;
+using mockshop.API.Domain.Models;
+using mockshop.API.Resources;
 
-namespace supermarket.API
+namespace mockshop.API
 {
     public class Startup
     {
@@ -33,7 +33,7 @@ namespace supermarket.API
             _logger.LogInformation("Configure service called");
             services.AddMvc();
             services.AddControllers();
-            services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("supermarket-in-memory"));
+            services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("mockshop-in-memory"));
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductRepository, ProductRepository>();

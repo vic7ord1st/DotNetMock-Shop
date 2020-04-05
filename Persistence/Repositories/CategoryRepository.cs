@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using supermarket.API.Domain.Models;
-using supermarket.API.Domain.Repositories;
-using supermarket.API.Persistence.Contexts;
+using mockshop.API.Domain.Models;
+using mockshop.API.Domain.Repositories;
+using mockshop.API.Persistence.Contexts;
 
-namespace supermarket.API.Persistence.Repositories
+namespace mockshop.API.Persistence.Repositories
 {
     public class CategoryRepository : BaseRepository, ICategoryRepository
     {

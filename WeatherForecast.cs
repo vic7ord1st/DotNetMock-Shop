@@ -1,6 +1,6 @@
 using System;
 
-namespace supermarket.API
+namespace mockshop.API
 {
     public class WeatherForecast
     {

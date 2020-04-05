@@ -2,13 +2,13 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using supermarket.API.Domain.Models;
+using mockshop.API.Domain.Models;
 using Microsoft.Extensions.Logging;
-using supermarket.API.Domain.Services;
-using supermarket.API.Resources;
-using supermarket.API.Extensions;
+using mockshop.API.Domain.Services;
+using mockshop.API.Resources;
+using mockshop.API.Extensions;
 
-namespace supermarket.API.Controllers
+namespace mockshop.API.Controllers
 {
     [Route("/api/[controller]")]
     public class CategoryController : Controller

@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using supermarket.API.Persistence.Contexts;
+using mockshop.API.Persistence.Contexts;
 
-namespace supermarket.API
+namespace mockshop.API
 {
     public class Program
     {

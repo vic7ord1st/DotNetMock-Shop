@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using supermarket.API.Domain.Models;
-using supermarket.API.Domain.Repositories;
-using supermarket.API.Persistence.Contexts;
+using mockshop.API.Domain.Models;
+using mockshop.API.Domain.Repositories;
+using mockshop.API.Persistence.Contexts;
 
-namespace supermarket.API.Persistence.Repositories {
+namespace mockshop.API.Persistence.Repositories {
    public class ProductRepository : BaseRepository, IProductRepository {
        public ProductRepository (AppDbContext context): base(context){}
 
@@ -14,11 +14,15 @@ namespace supermarket.API.Persistence.Repositories {
        }
 
        public async Task AddAsync(Product product){
-           await _context.products.AddAsync(product);
+            await _context.products.AddAsync(product);
        }
 
        public async Task<Product>  FindByIdAsync(int id){
-           return await _context.products.FindAsync(id);
+           return await _context.products.Include(p => p.category).FirstAsync(p => p.id == id);
+       }
+
+       public void Update (Product product){
+           _context.products.Update(product);
        }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace supermarket.API.Controllers
+namespace mockshop.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

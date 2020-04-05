@@ -1,8 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
-using supermarket.API.Domain.Models;
+using mockshop.API.Domain.Models;
 
-namespace supermarket.API.Persistence.Contexts {
+namespace mockshop.API.Persistence.Contexts {
 
     public class AppDbContext: DbContext {
         

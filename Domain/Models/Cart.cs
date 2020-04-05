@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace supermarket.API.Domain.Models {
+namespace mockshop.API.Domain.Models {
     public class Cart {
         public int id {get; set;}
 

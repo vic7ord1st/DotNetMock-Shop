@@ -1,7 +1,7 @@
-using supermarket.API.Domain.Models;
-using supermarket.API.Domain.Services.Communication;
+using mockshop.API.Domain.Models;
+using mockshop.API.Domain.Services.Communication;
 
-namespace supermarket.API.Domain.Services.Communication
+namespace mockshop.API.Domain.Services.Communication
 {
     public class ProductResponse : BaseResponse
     {

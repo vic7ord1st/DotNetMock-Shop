@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace supermarket.API.Resources {
+namespace mockshop.API.Resources {
 
 }public class SaveCategoryResource {
     [Required]

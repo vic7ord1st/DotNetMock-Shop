@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace supermarket.API.Extensions
+namespace mockshop.API.Extensions
 {
     public static class ModelStateExtensions
     {

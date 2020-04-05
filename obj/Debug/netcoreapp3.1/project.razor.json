@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj",
+  "FilePath": "c:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20518,7 +20518,7 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "supermarket.API",
+  "RootNamespace": "mockshop.API",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

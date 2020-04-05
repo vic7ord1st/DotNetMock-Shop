@@ -1,5 +1,5 @@
 
-namespace supermarket.API.Resources{
+namespace mockshop.API.Resources{
 
     public class ProductResource {
         public string name {get; set;}

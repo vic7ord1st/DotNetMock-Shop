@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using supermarket.API.Domain.Models;
-using supermarket.API.Domain.Services;
-using supermarket.API.Domain.Repositories;
-using supermarket.API.Domain.Services.Communication;
+using mockshop.API.Domain.Models;
+using mockshop.API.Domain.Services;
+using mockshop.API.Domain.Repositories;
+using mockshop.API.Domain.Services.Communication;
 
-namespace supermarket.API.Services
+namespace mockshop.API.Services
 {
     public class CategoryService : ICategoryService
     {

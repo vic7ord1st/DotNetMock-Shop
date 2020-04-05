@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using supermarket.API.Domain.Repositories;
-using supermarket.API.Persistence.Contexts;
+using mockshop.API.Domain.Repositories;
+using mockshop.API.Persistence.Contexts;
 
-namespace supermarket.API.Persistence.Repositories {
+namespace mockshop.API.Persistence.Repositories {
     public class UnitOfWork: IUnitOfWork {
         private readonly AppDbContext _context;
 

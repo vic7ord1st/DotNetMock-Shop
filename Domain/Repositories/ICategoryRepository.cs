@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using supermarket.API.Domain.Models;
+using mockshop.API.Domain.Models;
 
-namespace supermarket.API.Domain.Repositories
+namespace mockshop.API.Domain.Repositories
 {
  public interface ICategoryRepository {
      Task<IEnumerable<Category>> ListAsync();

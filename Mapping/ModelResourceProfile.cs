@@ -1,8 +1,8 @@
 using AutoMapper;
-using supermarket.API.Domain.Models;
-using supermarket.API.Resources;
+using mockshop.API.Domain.Models;
+using mockshop.API.Resources;
 
-namespace supermarket.API.Mapping {
+namespace mockshop.API.Mapping {
     public class ModelResourceProfile: Profile {
         public ModelResourceProfile(){
             CreateMap<Category, CategoryResource>();

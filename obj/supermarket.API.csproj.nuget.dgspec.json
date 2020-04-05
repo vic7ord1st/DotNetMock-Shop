@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj": {}
+    "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj": {
+    "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj",
-        "projectName": "supermarket.API",
-        "projectPath": "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\supermarket.API.csproj",
+        "projectUniqueName": "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj",
+        "projectName": "mockshop.API",
+        "projectPath": "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\mockshop.API.csproj",
         "packagesPath": "C:\\Users\\CRUSADR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CRUSADR\\Desktop\\supermarket.API\\obj\\",
+        "outputPath": "C:\\Users\\CRUSADR\\Desktop\\mockshop.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
