@@ -8,7 +8,8 @@ namespace supermarket.API.Domain.Services
     public interface IProductService
     {
          Task<IEnumerable<Product>> ListAsync();
-        //  Task<ProductResponse> SaveAsync(Product product);
+         Task<ProductResponse> GetAsync(int id);
+         Task<ProductResponse> SaveAsync(Product product);
 
         //  Task<ProductResponse> UpdateAsync(int id, Product product);
 

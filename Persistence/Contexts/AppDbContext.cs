@@ -41,7 +41,7 @@ namespace supermarket.API.Persistence.Contexts {
             builder.Entity<Category>().Property( c => c.id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Category>().Property( c => c.name).IsRequired();
             builder.Entity<Category>().HasIndex(c => c.name).IsUnique(true);
-            builder.Entity<Category>().HasMany(p => p.products).WithOne(c => c.category).HasForeignKey(p => p.categoryId);
+            builder.Entity<Category>().HasMany(p => p.products).WithOne(p => p.category).HasForeignKey(p => p.categoryId);
             
             // Seeding the Category table
             builder.Entity<Category>().HasData(
@@ -69,7 +69,6 @@ namespace supermarket.API.Persistence.Contexts {
             builder.Entity<Product>().Property(p => p.price).IsRequired();
             builder.Entity<Product>().Property(p => p.imageUrl).IsRequired();
             builder.Entity<Product>().Property(p => p.inStock).IsRequired();
-            builder.Entity<Product>().Property(p => p.categoryId).IsRequired();
 
             // Seeding the Product Table
             builder.Entity<Product>().HasData(

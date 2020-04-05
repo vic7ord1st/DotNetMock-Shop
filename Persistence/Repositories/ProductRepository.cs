@@ -10,7 +10,15 @@ namespace supermarket.API.Persistence.Repositories {
        public ProductRepository (AppDbContext context): base(context){}
 
        public async Task<IEnumerable<Product>> ListAsync (){
-           return await _context.products.ToListAsync();
+           return await _context.products.Include(p => p.category).ToListAsync();
+       }
+
+       public async Task AddAsync(Product product){
+           await _context.products.AddAsync(product);
+       }
+
+       public async Task<Product>  FindByIdAsync(int id){
+           return await _context.products.FindAsync(id);
        }
     }
 }

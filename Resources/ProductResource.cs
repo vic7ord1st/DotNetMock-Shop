@@ -1,11 +1,11 @@
+
 namespace supermarket.API.Resources{
 
     public class ProductResource {
-        public int id;
-        public string name;
-        public string description;
-        public int price;
-        public bool inStock;
-        public int categoryId;
+        public string name {get; set;}
+        public string description {get; set;}
+        public int price {get; set;}
+        public bool inStock {get; set;}
+        public CategoryResource category {get; set;}
     }
 }

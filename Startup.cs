@@ -40,6 +40,7 @@ namespace supermarket.API
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(CategoryResource));
+            services.AddAutoMapper(typeof(ProductResource));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
